@@ -16,6 +16,10 @@ socket.on('user-connected', name => {
     appendMessage(`${name} joined`);
 });
 
+socket.on('user-disconnected', name => {
+    appendMessage(`${name} left`);
+});
+
 messageForm.addEventListener('submit', e => {
     e.preventDefault();
 
